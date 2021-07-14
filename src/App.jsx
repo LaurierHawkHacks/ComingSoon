@@ -10,6 +10,9 @@ const ApplicationDiv = Styled.div`
     width: 100vw;
     height: 100vh;
     background-color: black;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
 `;
 
 const HawkHacksLogo = Styled.img`
@@ -60,15 +63,14 @@ class MyForm extends React.Component {
         let email = e.target.elements.Email.value.trim();
         
 
-       if(validator.isEmail(email)){
-             firestore.collection("Contacts").add({
-
-            name:name,
-            email:email
+        if(validator.isEmail(email)){
+            firestore.collection("Contacts").add({
+                name: name,
+                email: email
             });
-       }else{
+        }else{
             this.invalidEmail();
-       }
+        }
         
         
 
@@ -79,27 +81,27 @@ class MyForm extends React.Component {
     
     render(){
         return (
-        <form onSubmit={this.SaveContact} id="form">
+            <form onSubmit={this.SaveContact} id="form">
           
-          <p style={{color: "Aquamarine"}}>Subscribe here:</p>
-          <input
-            type="text"
-            placeholder="name"
-            name="Name"
-            />
-            <br/>
-            <input
-            type="text"
-            placeholder="email"
-            name="Email"
-            />
+                <p style={{color: "Aquamarine"}}>Subscribe here:</p>
+                <input
+                    type="text"
+                    placeholder="name"
+                    name="Name"
+                />
+                <br/>
+                <input
+                    type="text"
+                    placeholder="email"
+                    name="Email"
+                />
             
-            <br/>
-            <br/>
-            <button onClick={this.Toggle} style={{position:"relative"}}> Submit </button>
-            {this.state.visibility && <p style={{color: "Aquamarine"}}>{this.state.message}</p>}
-        </form>
-      );
+                <br/>
+                <br/>
+                <button onClick={this.Toggle} style={{position:"relative"}}> Submit </button>
+                {this.state.visibility && <p style={{color: "Aquamarine"}}>{this.state.message}</p>}
+            </form>
+        );
     }
 }
 
