@@ -67,6 +67,31 @@ const SocialMediaIcon = Styled.img`
 const Title = Styled.h1`
     color: #0A6972;
     font-weight: bold;
+    margin-top: 2.2rem;
+`;
+
+const Subtitle = Styled.h3`
+    font-weight: light;  
+`;
+
+const ClockPiece = Styled.div`
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem; 
+    flex-grow: 1;
+    color: #30292F;
+    h4 {
+        font-size: 1.35rem;
+        margin: 0;
+    }
+    p {
+        font-size: 0.75rem;
+        margin: 0;
+    }
+`;
+
+const ClockDivider = Styled.div`
+    border-left: 2px solid #30292F;
 `;
 
 if (firebase.apps.length === 0) {
@@ -167,6 +192,34 @@ class SocialMediaBar extends React.Component {
     }
 }
 
+class ClockWidget extends React.Component {
+    render() {
+        return(
+            <div style={{ width: "100%", display: "flex", flexDirection: "row" }}>
+                <ClockPiece>
+                    <h4>93</h4>
+                    <p>DAYS</p>
+                </ClockPiece>
+                <ClockDivider />
+                <ClockPiece>
+                    <h4>6</h4>
+                    <p>HRS</p>
+                </ClockPiece>
+                <ClockDivider />
+                <ClockPiece>
+                    <h4>17</h4>
+                    <p>MINS</p>
+                </ClockPiece>
+                <ClockDivider />
+                <ClockPiece>
+                    <h4>21</h4>
+                    <p>SECS</p>
+                </ClockPiece>
+            </div>
+        );
+    }
+}
+
 function App() {
     
     return (
@@ -174,15 +227,16 @@ function App() {
             <HawkHacksIcon src={Icon} alt="HawkHacks Icon" />
             <PanelDiv className="dropshadow">
                 {/*<PanelBackground src={Icon} />*/}
+                <ClockWidget />
                 <Title>HawkHacks 2022</Title>
-                <h3>Laurier | On Campus and Virtual | xxxxx xx-xx</h3>
+                <Subtitle>Laurier | On Campus and Virtual | xxxxx xx-xx</Subtitle>
                 <p>
                     We&apos;re currently working on something exciting!<br />
                     Be notified when applications open.
                 </p>
                 <MyForm/>
             </PanelDiv>
-            <SocialMediaBar style={{marginTop: "auto"}} />
+            <SocialMediaBar style={{ marginTop: "auto" }} />
         </ApplicationDiv>
     );
 }
