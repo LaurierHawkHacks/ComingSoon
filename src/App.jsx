@@ -7,11 +7,11 @@ import config from "./config.json";
 import validator from "validator";
 import {
     RiDiscordLine as DiscordIcon,
-    RiFacebookLine as FacebookIcon,
     RiTwitterLine as TwitterIcon,
     RiInstagramLine as InstagramIcon,
     RiGithubLine as GithubIcon
 } from "react-icons/ri";
+import { FiFacebook as FacebookIcon } from "react-icons/fi";
 
 const ApplicationDiv = Styled.div`
     width: 100vw;
@@ -31,8 +31,22 @@ const HawkHacksIcon = Styled.img`
 `;
 
 const PanelDiv = Styled.div`
-    text-align: center;
     color: #2F4858;
+    text-align: center;
+    background: rgba(250, 250, 250, 1);
+    border-radius: 1rem;
+    width: max-content;
+    height: max-content;
+    padding: 2rem;
+`;
+
+const PanelBackground = Styled.img`
+    opacity: 0.18;
+    position: absolute;
+    left: 15%;
+    top: 0;
+    width: auto;
+    height: 100%;
 `;
 
 const SocialMediaDiv = Styled.div`
@@ -40,10 +54,10 @@ const SocialMediaDiv = Styled.div`
 `;
 
 const SocialMediaIcon = Styled.img`
-    margin: 10px;
-    width: 28px;
-    height: 28px;
     color: #2F4858;
+    margin: 0.8rem;
+    width: 1.8rem;
+    height: 1.8rem;
 `;
 
 const Title = Styled.h1`
@@ -154,11 +168,12 @@ function App() {
     return (
         <ApplicationDiv className="App">
             <HawkHacksIcon src={Icon} alt="HawkHacks Icon" />
-            <PanelDiv>
+            <PanelDiv className="dropshadow">
+                <PanelBackground src={Icon} />
                 <Title>HawkHacks 2022</Title>
                 <h3>Laurier | On Campus and Virtual | xxxxx xx-xx</h3>
                 <p>
-                    We&apos;re currently working on something exciting!
+                    We&apos;re currently working on something exciting!<br />
                     Be notified when applications open.
                 </p>
                 <MyForm/>
