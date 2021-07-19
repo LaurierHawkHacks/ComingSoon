@@ -1,21 +1,28 @@
 import React from "react";
 import Styled from "styled-components";
-import Logo from "./assets/logo_black.svg";
+import Icon from "./assets/icon.svg";
 import firebase from "firebase/app";
 import "firebase/firestore";
 import config from "./config.json";
 import validator from "validator";
+import {
+    RiDiscordLine as DiscordIcon,
+    RiFacebookLine as FacebookIcon,
+    RiTwitterLine as TwitterIcon,
+    RiInstagramLine as InstagramIcon,
+    RiGithubLine as GithubIcon
+} from "react-icons/ri";
 
 const ApplicationDiv = Styled.div`
     width: 100vw;
     height: 100vh;
-    background-color: black;
+    background-color: white;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column;
     align-items: center;
 `;
 
-const HawkHacksLogo = Styled.img`
+const HawkHacksIcon = Styled.img`
     transition: all 0.25s ease;
     :hover {
         filter: brightness(75%);
@@ -23,7 +30,30 @@ const HawkHacksLogo = Styled.img`
     }
 `;
 
-firebase.initializeApp(config.firebaseConfig);
+const PanelDiv = Styled.div`
+    text-align: center;
+    color: #2F4858;
+`;
+
+const SocialMediaDiv = Styled.div`
+    display: flex;
+`;
+
+const SocialMediaIcon = Styled.img`
+    margin: 10px;
+    width: 28px;
+    height: 28px;
+    color: #2F4858;
+`;
+
+const Title = Styled.h1`
+    color: #0A6972;
+    font-weight: bold;
+`;
+
+if (firebase.apps.length === 0) {
+    firebase.initializeApp(config.firebaseConfig);
+}
 
 let firestore = firebase.firestore();
 
@@ -105,12 +135,35 @@ class MyForm extends React.Component {
     }
 }
 
+class SocialMediaBar extends React.Component {
+    render() {
+        return (
+            <SocialMediaDiv>
+                <SocialMediaIcon as={DiscordIcon} alt="Discord Icon" />
+                <SocialMediaIcon as={FacebookIcon} alt="Facebook Icon"  />
+                <SocialMediaIcon as={TwitterIcon} alt="Twitter Icon"  />
+                <SocialMediaIcon as={InstagramIcon} alt="Instagram Icon"  />
+                <SocialMediaIcon as={GithubIcon} alt="Github Icon"  />
+            </SocialMediaDiv>
+        );
+    }
+}
+
 function App() {
     
     return (
         <ApplicationDiv className="App">
-            <HawkHacksLogo src={Logo} />
-            <MyForm/>
+            <HawkHacksIcon src={Icon} alt="HawkHacks Icon" />
+            <PanelDiv>
+                <Title>HawkHacks 2022</Title>
+                <h3>Laurier | On Campus and Virtual | xxxxx xx-xx</h3>
+                <p>
+                    We&apos;re currently working on something exciting!
+                    Be notified when applications open.
+                </p>
+                <MyForm/>
+            </PanelDiv>
+            <SocialMediaBar />
         </ApplicationDiv>
     );
 }
