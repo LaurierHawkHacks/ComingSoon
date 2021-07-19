@@ -21,3 +21,13 @@ code {
 .dropshadow {
   filter: drop-shadow(4px 4px 14px rgba(0, 0, 0, 0.22));
 }
+
+/* Trick */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  margin-top: auto;
+}

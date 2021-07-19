@@ -28,6 +28,9 @@ const HawkHacksIcon = Styled.img`
         filter: brightness(75%);
         transition: all 0.25s ease;
     }
+    width: 5rem;
+    height: 5rem;
+    margin: 3rem 0;
 `;
 
 const PanelDiv = Styled.div`
@@ -38,16 +41,17 @@ const PanelDiv = Styled.div`
     width: max-content;
     height: max-content;
     padding: 2rem;
+    position: relative;
 `;
 
-const PanelBackground = Styled.img`
+/*const PanelBackground = Styled.img`
     opacity: 0.18;
     position: absolute;
     left: 15%;
     top: 0;
     width: auto;
     height: 100%;
-`;
+`;*/
 
 const SocialMediaDiv = Styled.div`
     display: flex;
@@ -169,7 +173,7 @@ function App() {
         <ApplicationDiv className="App">
             <HawkHacksIcon src={Icon} alt="HawkHacks Icon" />
             <PanelDiv className="dropshadow">
-                <PanelBackground src={Icon} />
+                {/*<PanelBackground src={Icon} />*/}
                 <Title>HawkHacks 2022</Title>
                 <h3>Laurier | On Campus and Virtual | xxxxx xx-xx</h3>
                 <p>
@@ -178,7 +182,7 @@ function App() {
                 </p>
                 <MyForm/>
             </PanelDiv>
-            <SocialMediaBar />
+            <SocialMediaBar style={{marginTop: "auto"}} />
         </ApplicationDiv>
     );
 }
