@@ -40,7 +40,8 @@ const PanelDiv = Styled.div`
     border-radius: 1rem;
     width: max-content;
     height: max-content;
-    padding: 2rem;
+    padding: 2rem 4rem;
+    margin-bottom: 2rem;
     position: relative;
 `;
 
@@ -55,6 +56,7 @@ const PanelDiv = Styled.div`
 
 const SocialMediaDiv = Styled.div`
     display: flex;
+    margin-bottom: 1rem;
 `;
 
 const SocialMediaIcon = Styled.img`
@@ -94,6 +96,10 @@ const ClockDivider = Styled.div`
     border-left: 2px solid #30292F;
 `;
 
+const SpaceFillerDiv = Styled.div`
+    flex-grow: 1;
+`;
+
 if (firebase.apps.length === 0) {
     firebase.initializeApp(config.firebaseConfig);
 }
@@ -102,7 +108,7 @@ let firestore = firebase.firestore();
 
 class MyForm extends React.Component {
    
-    constructor(props){
+    constructor(props) {
         super(props);
         this.Toggle= this.Toggle.bind(this);
         this.SaveContact = this.SaveContact.bind(this);
@@ -110,38 +116,37 @@ class MyForm extends React.Component {
         this.state = {
             visibility: false
         };
-        this.state={
+        this.state = {
             message: "Submition Successfull"
         };
     }
-    Toggle(){
-        this.setState(()=>{
+    Toggle() {
+        this.setState(() => {
             return{
                 visibility: true
                 
             };
         });
     }
-    invalidEmail(){
-        this.setState(()=>{
+    invalidEmail() {
+        this.setState(() => {
             return{
                 message: "Invalid email, please try again!"
             };
         });
     }
-    SaveContact(e){
+    SaveContact(e) {
         e.preventDefault();
 
         let name = e.target.elements.Name.value;
         let email = e.target.elements.Email.value.trim();
         
-
-        if(validator.isEmail(email)){
+        if (validator.isEmail(email)) {
             firestore.collection("Contacts").add({
                 name: name,
                 email: email
             });
-        }else{
+        } else {
             this.invalidEmail();
         }
         
@@ -152,7 +157,7 @@ class MyForm extends React.Component {
       
     }
     
-    render(){
+    render() {
         return (
             <form onSubmit={this.SaveContact} id="form">
           
@@ -252,6 +257,7 @@ function App() {
                 </p>
                 <MyForm/>
             </PanelDiv>
+            <SpaceFillerDiv />
             <SocialMediaBar style={{ marginTop: "auto" }} />
         </ApplicationDiv>
     );
