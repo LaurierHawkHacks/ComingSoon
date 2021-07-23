@@ -193,26 +193,42 @@ class SocialMediaBar extends React.Component {
 }
 
 class ClockWidget extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { date: new Date() };
+    }
+    componentDidMount() {
+        setInterval(
+            () => this.setState({ date: new Date() }),
+            1000
+        );
+    }
     render() {
+        const hackathonStartTime = 1629734400000; // use currentmillis.com to quickly find this
+        const countdown = hackathonStartTime - this.state.date;
+        const days = (countdown - (countdown % 86400000)) / 86400000;
+        const hours = ((countdown % 86400000) - (countdown % 3600000)) / 3600000;
+        const minutes = ((countdown % 3600000) - (countdown % 60000)) / 60000;
+        const seconds = ((countdown % 60000) - (countdown % 1000)) / 1000;
         return(
             <div style={{ width: "100%", display: "flex", flexDirection: "row" }}>
                 <ClockPiece>
-                    <h4>93</h4>
+                    <h4>{days}</h4>
                     <p>DAYS</p>
                 </ClockPiece>
                 <ClockDivider />
                 <ClockPiece>
-                    <h4>6</h4>
+                    <h4>{hours}</h4>
                     <p>HRS</p>
                 </ClockPiece>
                 <ClockDivider />
                 <ClockPiece>
-                    <h4>17</h4>
+                    <h4>{minutes}</h4>
                     <p>MINS</p>
                 </ClockPiece>
                 <ClockDivider />
                 <ClockPiece>
-                    <h4>21</h4>
+                    <h4>{seconds}</h4>
                     <p>SECS</p>
                 </ClockPiece>
             </div>
