@@ -210,7 +210,7 @@ class ClockWidget extends React.Component {
         );
     }
     render() {
-        const hackathonStartTime = 1629734400000; // use currentmillis.com to quickly find this
+        const hackathonStartTime = 1641531600000; // use currentmillis.com to find this number
         const countdown = hackathonStartTime - this.state.date;
         const days = (countdown - (countdown % 86400000)) / 86400000;
         const hours = ((countdown % 86400000) - (countdown % 3600000)) / 3600000;
