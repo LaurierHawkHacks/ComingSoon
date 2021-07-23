@@ -45,14 +45,15 @@ const PanelDiv = Styled.div`
     position: relative;
 `;
 
-/*const PanelBackground = Styled.img`
-    opacity: 0.18;
+const PanelBackground = Styled.img`
+    opacity: 0.12;
     position: absolute;
     left: 15%;
     top: 0;
     width: auto;
     height: 100%;
-`;*/
+    pointer-events: none;
+`;
 
 const SocialMediaDiv = Styled.div`
     display: flex;
@@ -247,7 +248,7 @@ function App() {
         <ApplicationDiv className="App">
             <HawkHacksIcon src={Icon} alt="HawkHacks Icon" />
             <PanelDiv className="dropshadow">
-                {/*<PanelBackground src={Icon} />*/}
+                <PanelBackground src={Icon} />
                 <ClockWidget />
                 <Title>HawkHacks 2022</Title>
                 <Subtitle>Laurier | On Campus and Virtual | xxxxx xx-xx</Subtitle>
@@ -255,10 +256,10 @@ function App() {
                     We&apos;re currently working on something exciting!<br />
                     Be notified when applications open.
                 </p>
-                <MyForm/>
+                <MyForm />
             </PanelDiv>
             <SpaceFillerDiv />
-            <SocialMediaBar style={{ marginTop: "auto" }} />
+            <SocialMediaBar />
         </ApplicationDiv>
     );
 }
