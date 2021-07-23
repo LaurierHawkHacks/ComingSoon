@@ -180,7 +180,7 @@ class MyForm extends React.Component {
     render() {
         return (
             <form onSubmit={this.SaveContact} id="form">
-                <p>Subscribe here:</p>
+                <p style={{ color: "lightseagreen", fontWeight: "bold" }}>Subscribe here:</p>
                 <div style={{ display: "flex", flexDirection: "row" }}>
                     <div style={{ display: "flex", flexDirection: "column", flexGrow: 1 }}>
                         <FormInput
