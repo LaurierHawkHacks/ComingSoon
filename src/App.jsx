@@ -127,10 +127,10 @@ if (firebase.apps.length === 0) {
 let firestore = firebase.firestore();
 
 class MyForm extends React.Component {
-   
+
     constructor(props) {
         super(props);
-        this.Toggle= this.Toggle.bind(this);
+        this.Toggle = this.Toggle.bind(this);
         this.SaveContact = this.SaveContact.bind(this);
         this.invalidEmail = this.invalidEmail.bind(this);
         this.state = {
@@ -142,15 +142,15 @@ class MyForm extends React.Component {
     }
     Toggle() {
         this.setState(() => {
-            return{
+            return {
                 visibility: true
-                
+
             };
         });
     }
     invalidEmail() {
         this.setState(() => {
-            return{
+            return {
                 message: "Invalid email, please try again!"
             };
         });
@@ -160,7 +160,7 @@ class MyForm extends React.Component {
 
         let name = e.target.elements.Name.value;
         let email = e.target.elements.Email.value.trim();
-        
+
         if (validator.isEmail(email)) {
             firestore.collection("Contacts").add({
                 name: name,
@@ -169,14 +169,14 @@ class MyForm extends React.Component {
         } else {
             this.invalidEmail();
         }
-        
-        
+
+
 
         document.getElementById("form").reset();
 
-      
+
     }
-    
+
     render() {
         return (
             <form onSubmit={this.SaveContact} id="form">
@@ -197,11 +197,11 @@ class MyForm extends React.Component {
                         />
                     </div>
                     <div style={{ display: "flex", flexDirection: "column" }}>
-                        <FormButton onClick={this.Toggle} style={{ position:"relative" }} className="dropshadow">Submit</FormButton>
+                        <FormButton onClick={this.Toggle} style={{ position: "relative" }} className="dropshadow">Submit</FormButton>
                     </div>
                 </div>
                 {this.state.visibility && <p>{this.state.message}</p>}
-            </form>
+            </form >
         );
     }
 }
@@ -211,10 +211,10 @@ class SocialMediaBar extends React.Component {
         return (
             <SocialMediaDiv>
                 <SocialMediaIcon as={DiscordIcon} alt="Discord Icon" />
-                <SocialMediaIcon as={FacebookIcon} alt="Facebook Icon"  />
-                <SocialMediaIcon as={TwitterIcon} alt="Twitter Icon"  />
-                <SocialMediaIcon as={InstagramIcon} alt="Instagram Icon"  />
-                <SocialMediaIcon as={GithubIcon} alt="Github Icon"  />
+                <SocialMediaIcon as={FacebookIcon} alt="Facebook Icon" />
+                <SocialMediaIcon as={TwitterIcon} alt="Twitter Icon" />
+                <SocialMediaIcon as={InstagramIcon} alt="Instagram Icon" />
+                <SocialMediaIcon as={GithubIcon} alt="Github Icon" />
             </SocialMediaDiv>
         );
     }
@@ -238,7 +238,7 @@ class ClockWidget extends React.Component {
         const hours = ((countdown % 86400000) - (countdown % 3600000)) / 3600000;
         const minutes = ((countdown % 3600000) - (countdown % 60000)) / 60000;
         const seconds = ((countdown % 60000) - (countdown % 1000)) / 1000;
-        return(
+        return (
             <div style={{ width: "100%", display: "flex", flexDirection: "row" }}>
                 <ClockPiece>
                     <h4>{days}</h4>
@@ -265,7 +265,7 @@ class ClockWidget extends React.Component {
 }
 
 function App() {
-    
+
     return (
         <ApplicationDiv className="App">
             <HawkHacksIcon src={Icon} alt="HawkHacks Icon" />
