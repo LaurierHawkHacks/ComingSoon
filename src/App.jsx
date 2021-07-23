@@ -101,6 +101,25 @@ const SpaceFillerDiv = Styled.div`
     flex-grow: 1;
 `;
 
+const FormInput = Styled.input`
+    background-color: white;
+    border: 0;
+    border-radius: 0.8rem;
+    font-size: 1rem;
+    padding: 0.6rem;
+    margin: 0.2rem 0.4rem 0.2rem 0;
+`;
+
+const FormButton = Styled.button`
+    color: white;
+    background-color: #0FA3B1;
+    border: 0;
+    border-radius: 0.8rem;
+    font-size: 1rem;
+    padding: 0.6rem;
+    margin: 0.2rem 0 0.2rem 0.4rem;
+`;
+
 if (firebase.apps.length === 0) {
     firebase.initializeApp(config.firebaseConfig);
 }
@@ -118,7 +137,7 @@ class MyForm extends React.Component {
             visibility: false
         };
         this.state = {
-            message: "Submition Successfull"
+            message: "Submission Successful!"
         };
     }
     Toggle() {
@@ -161,24 +180,27 @@ class MyForm extends React.Component {
     render() {
         return (
             <form onSubmit={this.SaveContact} id="form">
-          
-                <p style={{color: "Aquamarine"}}>Subscribe here:</p>
-                <input
-                    type="text"
-                    placeholder="name"
-                    name="Name"
-                />
-                <br/>
-                <input
-                    type="text"
-                    placeholder="email"
-                    name="Email"
-                />
-            
-                <br/>
-                <br/>
-                <button onClick={this.Toggle} style={{position:"relative"}}> Submit </button>
-                {this.state.visibility && <p style={{color: "Aquamarine"}}>{this.state.message}</p>}
+                <p>Subscribe here:</p>
+                <div style={{ display: "flex", flexDirection: "row" }}>
+                    <div style={{ display: "flex", flexDirection: "column", flexGrow: 1 }}>
+                        <FormInput
+                            type="text"
+                            placeholder="Name"
+                            name="Name"
+                            className="dropshadow"
+                        />
+                        <FormInput
+                            type="text"
+                            placeholder="Email Address"
+                            name="Email"
+                            className="dropshadow"
+                        />
+                    </div>
+                    <div style={{ display: "flex", flexDirection: "column" }}>
+                        <FormButton onClick={this.Toggle} style={{ position:"relative" }} className="dropshadow">Submit</FormButton>
+                    </div>
+                </div>
+                {this.state.visibility && <p>{this.state.message}</p>}
             </form>
         );
     }
