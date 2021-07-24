@@ -241,6 +241,7 @@ class ClockWidget extends React.Component {
         const hours = ((countdown % 86400000) - (countdown % 3600000)) / 3600000;
         const minutes = ((countdown % 3600000) - (countdown % 60000)) / 60000;
         const seconds = ((countdown % 60000) - (countdown % 1000)) / 1000;
+        
         return (
             <div style={{ width: "100%", display: "flex", flexDirection: "row" }}>
                 <ClockPiece>
