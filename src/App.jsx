@@ -3,14 +3,17 @@ import Styled from "styled-components";
 import Icon from "./assets/icon.svg";
 import firebase from "firebase/app";
 import "firebase/firestore";
+
 import config from "./config.json";
 import validator from "validator";
+
 import {
     RiDiscordLine as DiscordIcon,
     RiTwitterLine as TwitterIcon,
     RiInstagramLine as InstagramIcon,
     RiGithubLine as GithubIcon
 } from "react-icons/ri";
+
 import { FiFacebook as FacebookIcon } from "react-icons/fi";
 
 const ApplicationDiv = Styled.div`
@@ -287,3 +290,27 @@ function App() {
 }
 
 export default App;
+
+const NEXT_EVENT_YEAR = 2021;
+const NEXT_EVENT_MONTH = 8;
+const NEXT_EVENT_DAY = 25;
+const NEXT_EVENT_HOUR = 0;
+
+const NEXT_EVENT_DATE = new Date(NEXT_EVENT_YEAR, NEXT_EVENT_MONTH, NEXT_EVENT_DAY, NEXT_EVENT_HOUR, 0, 0, 0);
+
+// eslint-disable-next-line no-unused-vars
+function getTimeLeft() {
+    let timeLeft = new Date(NEXT_EVENT_DATE - new Date());
+    let days = Math.floor(timeLeft / (24 * 60 * 60 * 1000));
+    timeLeft %= (24 * 60 * 60 * 1000);
+
+    let hours = Math.floor(timeLeft / (60 * 60 * 1000));
+    timeLeft %= (60 * 60 * 1000);
+
+    let minutes = Math.floor(timeLeft / (60 * 1000));
+    timeLeft %= (60 * 1000);
+
+    let seconds = Math.floor(timeLeft / 1000);
+    return { "days": days, "hours": hours, "minutes": minutes, "seconds": seconds };
+
+}
