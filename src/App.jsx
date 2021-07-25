@@ -37,9 +37,9 @@ const HawkHacksIcon = Styled.img`
 `;
 
 const PanelDiv = Styled.div`
+    background: rgba(248, 248, 248, 1);
     color: #2F4858;
     text-align: center;
-    background: rgba(250, 250, 250, 1);
     border-radius: 1rem;
     width: max-content;
     height: max-content;
@@ -49,11 +49,11 @@ const PanelDiv = Styled.div`
 `;
 
 const PanelBackground = Styled.img`
-    opacity: 0.12;
+    opacity: 0.14;
     position: absolute;
     left: 15%;
     top: 0;
-    width: auto;
+    width: 70%;
     height: 100%;
     pointer-events: none;
 `;
@@ -72,12 +72,13 @@ const SocialMediaIcon = Styled.img`
 
 const Title = Styled.h1`
     color: #0A6972;
-    font-weight: bold;
-    margin-top: 2.2rem;
+    font-weight: 800;
+    margin: 2.2rem 0 0 0;
+    font-size: 2.2rem;
 `;
 
 const Subtitle = Styled.h3`
-    font-weight: light;  
+    font-weight: 600;  
 `;
 
 const ClockPiece = Styled.div`
@@ -119,8 +120,15 @@ const FormButton = Styled.button`
     border: 0;
     border-radius: 0.8rem;
     font-size: 1rem;
-    padding: 0.6rem;
+    padding: 0.6rem 1.2rem;
     margin: 0.2rem 0 0.2rem 0.4rem;
+    flex-grow: 1;
+`;
+
+const FormMessage = Styled.p`
+    margin: 1.2rem 0 0 0;
+    color: #2F4858;
+    transition: 1;
 `;
 
 if (firebase.apps.length === 0) {
@@ -140,14 +148,13 @@ class MyForm extends React.Component {
             visibility: false
         };
         this.state = {
-            message: "Submission Successful!"
+            message: "Thank you for subscribing!"
         };
     }
     Toggle() {
         this.setState(() => {
             return {
                 visibility: true
-
             };
         });
     }
@@ -168,7 +175,13 @@ class MyForm extends React.Component {
             firestore.collection("Contacts").add({
                 name: name,
                 email: email
-            });
+            })
+                .then(
+                    this.setState({ message: "Thank you for subscribing!", visibility: true }))
+                .then(
+                    setInterval(() => this.setState({ visibility: false }),
+                        5000)
+                );
         } else {
             this.invalidEmail();
         }
@@ -183,8 +196,8 @@ class MyForm extends React.Component {
     render() {
         return (
             <form onSubmit={this.SaveContact} id="form">
-                <p style={{ color: "lightseagreen", fontWeight: "bold" }}>Subscribe here:</p>
-                <div style={{ display: "flex", flexDirection: "row" }}>
+                {/*<p style={{ color: "lightseagreen", fontWeight: "bold" }}>Subscribe here:</p>*/}
+                <div style={{ display: "flex", flexDirection: "row", marginTop: "2rem" }}>
                     <div style={{ display: "flex", flexDirection: "column", flexGrow: 1 }}>
                         <FormInput
                             type="text"
@@ -200,10 +213,10 @@ class MyForm extends React.Component {
                         />
                     </div>
                     <div style={{ display: "flex", flexDirection: "column" }}>
-                        <FormButton onClick={this.Toggle} style={{ position: "relative" }} className="dropshadow">Submit</FormButton>
+                        <FormButton onClick={this.Toggle} className="dropshadow">Sign Up</FormButton>
                     </div>
                 </div>
-                {this.state.visibility && <p>{this.state.message}</p>}
+                {this.state.visibility && <FormMessage>{this.state.message}</FormMessage>}
             </form >
         );
     }
@@ -273,7 +286,7 @@ function App() {
     return (
         <ApplicationDiv className="App">
             <HawkHacksIcon src={Icon} alt="HawkHacks Icon" />
-            <PanelDiv className="dropshadow">
+            <PanelDiv className="dropshadow-large">
                 <PanelBackground src={Icon} />
                 <ClockWidget />
                 <Title>HawkHacks 2022</Title>
