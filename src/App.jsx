@@ -368,7 +368,7 @@ function App() {
                 <PanelBackground src={Icon} />
                 <ClockWidget />
                 <Title>HawkHacks 2022</Title>
-                <Subtitle>Laurier | On Campus and Virtual | xxxxx xx-xx</Subtitle>
+                <Subtitle>Wilfrid Laurier University | On-Campus and Virtual</Subtitle>
                 <p>
                     We&apos;re currently working on something exciting!<br />
                     Be notified when applications open.
