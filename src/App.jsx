@@ -16,6 +16,8 @@ import {
 
 import { FiFacebook as FacebookIcon } from "react-icons/fi";
 
+import { breakpoints } from "./utils";
+
 const ApplicationDiv = Styled.div`
     width: 100vw;
     height: 100vh;
@@ -32,8 +34,17 @@ const HawkHacksIcon = Styled.img`
         transition: all 0.25s ease;
     }
     width: 5rem;
+    ${breakpoints("width", [
+        { 250: "4rem" }
+    ])}
     height: 5rem;
+    ${breakpoints("height", [
+        { 250: "4rem" }
+    ])}
     margin: 3rem 0;
+    ${breakpoints("margin", [
+        { 250: "2rem 0"}
+    ])}
 `;
 
 const PanelDiv = Styled.div`
@@ -41,11 +52,29 @@ const PanelDiv = Styled.div`
     color: #2F4858;
     text-align: center;
     border-radius: 1rem;
-    width: max-content;
     height: max-content;
+    width: max-content;
+    ${breakpoints("width", [
+        { 600: "22rem" },
+        { 450: "20rem" },
+        { 350: "calc(100vw - 2rem)" }
+    ])};
     padding: 2rem 4rem;
+    ${breakpoints("padding", [
+        { 600: "2rem 2rem" },
+        { 450: "1.6rem 1.2rem" },
+        { 350: "1.2rem 0.6rem" }
+    ])}
     margin-bottom: 2rem;
     position: relative;
+    p {
+    font-size: 1rem;
+    ${breakpoints("font-size", [
+        { 450: "0.9rem" },
+        { 350: "0.82rem" },
+        { 250: "0.8rem" }
+    ])}
+    }
 `;
 
 const PanelBackground = Styled.img`
@@ -60,7 +89,11 @@ const PanelBackground = Styled.img`
 
 const SocialMediaDiv = Styled.div`
     display: flex;
-    margin-bottom: 1rem;
+    margin-bottom: 1.6rem;
+    flex-direction: row;
+    ${breakpoints("flex-direction", [
+        { 300: "column" }
+    ])}
 `;
 
 const SocialMediaIcon = Styled.img`
@@ -75,25 +108,45 @@ const Title = Styled.h1`
     font-weight: 800;
     margin: 2.2rem 0 0 0;
     font-size: 2.2rem;
+    ${breakpoints("font-size", [
+        { 600: "2.2rem" },
+        { 450: "1.8rem" },
+        { 300: "1.4rem" },
+        { 250: "1.1rem" }
+    ])}
 `;
 
 const Subtitle = Styled.h3`
-    font-weight: 600;  
+    font-weight: 600;
+    font-size: 1.2rem;
+    ${breakpoints("font-size", [
+        { 600: "1rem" },
+        { 300: "0.9rem" },
+        { 250: "0.8rem" }
+    ])}
 `;
 
 const ClockPiece = Styled.div`
     display: flex;
     flex-direction: column;
-    margin: 0 1rem; 
+    margin: 0 0.12rem;
     flex-grow: 1;
     color: #30292F;
     h4 {
-        font-size: 1.35rem;
-        margin: 0;
+    font-size: 1.35rem;
+    ${breakpoints("font-size", [
+        { 300: "1rem" },
+        { 250: "0.9rem" }
+    ])}
+    margin: 0;
     }
     p {
-        font-size: 0.75rem;
-        margin: 0;
+    font-size: 0.75rem;
+    ${breakpoints("font-size", [
+        { 300: "0.6rem" },
+        { 250: "0.56rem" }
+    ])}
+    margin: 0;
     }
 `;
 
@@ -102,7 +155,7 @@ const ClockDivider = Styled.div`
 `;
 
 const SpaceFillerDiv = Styled.div`
-    flex-grow: 1;
+    margin: auto 0;
 `;
 
 const FormInput = Styled.input`
@@ -110,8 +163,16 @@ const FormInput = Styled.input`
     border: 0;
     border-radius: 0.8rem;
     font-size: 1rem;
+    ${breakpoints("font-size", [
+        { 450: "0.9rem" },
+        { 300: "0.84rem" },
+        { 250: "0.8rem" }
+    ])}
     padding: 0.6rem;
     margin: 0.2rem 0.4rem 0.2rem 0;
+    ${breakpoints("margin", [
+        { 450: "0.2rem 0" }
+    ])}
 `;
 
 const FormButton = Styled.button`
@@ -120,8 +181,16 @@ const FormButton = Styled.button`
     border: 0;
     border-radius: 0.8rem;
     font-size: 1rem;
+    ${breakpoints("font-size", [
+        { 450: "0.9rem" },
+        { 300: "0.84rem" },
+        { 250: "0.8rem" }
+    ])}
     padding: 0.6rem 1.2rem;
     margin: 0.2rem 0 0.2rem 0.4rem;
+    ${breakpoints("margin", [
+        { 450: "0.8rem 0 0.2rem 0" }
+    ])}
     flex-grow: 1;
 `;
 
@@ -129,6 +198,15 @@ const FormMessage = Styled.p`
     margin: 1.2rem 0 0 0;
     color: #2F4858;
     transition: 1;
+`;
+
+const FormInputDiv = Styled.div`
+    display: flex;
+    flex-direction: row;
+    ${breakpoints("flex-direction", [
+        { 450: "column" }
+    ])}
+    marginTop: 2rem;
 `;
 
 if (firebase.apps.length === 0) {
@@ -197,7 +275,7 @@ class MyForm extends React.Component {
         return (
             <form onSubmit={this.SaveContact} id="form">
                 {/*<p style={{ color: "lightseagreen", fontWeight: "bold" }}>Subscribe here:</p>*/}
-                <div style={{ display: "flex", flexDirection: "row", marginTop: "2rem" }}>
+                <FormInputDiv style={{ marginTop: "2rem" }}>
                     <div style={{ display: "flex", flexDirection: "column", flexGrow: 1 }}>
                         <FormInput
                             type="text"
@@ -215,7 +293,7 @@ class MyForm extends React.Component {
                     <div style={{ display: "flex", flexDirection: "column" }}>
                         <FormButton onClick={this.Toggle} className="dropshadow">Sign Up</FormButton>
                     </div>
-                </div>
+                </FormInputDiv>
                 {this.state.visibility && <FormMessage>{this.state.message}</FormMessage>}
             </form >
         );
