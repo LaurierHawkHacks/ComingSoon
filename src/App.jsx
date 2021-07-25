@@ -61,6 +61,7 @@ const PanelDiv = Styled.div`
     ])};
     padding: 2rem 4rem;
     ${breakpoints("padding", [
+        { 800: "2rem 3rem" },
         { 600: "2rem 2rem" },
         { 450: "1.6rem 1.2rem" },
         { 350: "1.2rem 0.6rem" }
@@ -304,11 +305,11 @@ class SocialMediaBar extends React.Component {
     render() {
         return (
             <SocialMediaDiv>
-                <SocialMediaIcon as={DiscordIcon} alt="Discord Icon" />
-                <SocialMediaIcon as={FacebookIcon} alt="Facebook Icon" />
-                <SocialMediaIcon as={TwitterIcon} alt="Twitter Icon" />
-                <SocialMediaIcon as={InstagramIcon} alt="Instagram Icon" />
-                <SocialMediaIcon as={GithubIcon} alt="Github Icon" />
+                <a href="https://discord.gg/z8XbEEXkqN" target="_blank" rel="noreferrer"><SocialMediaIcon as={DiscordIcon} alt="Discord Icon" /></a>
+                <a href="" target="" rel="noreferrer"><SocialMediaIcon as={FacebookIcon} alt="Facebook Icon" /></a>
+                <a href="https://twitter.com/wluhawkhacks" target="_blank" rel="noreferrer"><SocialMediaIcon as={TwitterIcon} alt="Twitter Icon" /></a>
+                <a href="https://www.instagram.com/wluhawkhacks/" target="_blank" rel="noreferrer"><SocialMediaIcon as={InstagramIcon} alt="Instagram Icon"/></a>
+                <a href="https://github.com/LaurierHawkHacks" target="_blank" rel="noreferrer"><SocialMediaIcon as={GithubIcon} alt="Github Icon" /></a>
             </SocialMediaDiv>
         );
     }
@@ -368,7 +369,7 @@ function App() {
                 <PanelBackground src={Icon} />
                 <ClockWidget />
                 <Title>HawkHacks 2022</Title>
-                <Subtitle>Wilfrid Laurier University | On-Campus and Virtual</Subtitle>
+                <Subtitle>Laurier | On-Campus and Virtual</Subtitle>
                 <p>
                     We&apos;re currently working on something exciting!<br />
                     Be notified when applications open.
