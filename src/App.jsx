@@ -77,7 +77,7 @@ const PanelDiv = Styled.div`
         { 450: "1.6rem 1.2rem" },
         { 350: "1.2rem 0.6rem" }
     ])}
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
         position: relative;
         p {
         font-size: 1rem;
@@ -101,7 +101,7 @@ const PanelBackground = Styled.img`
 
 const SocialMediaDiv = Styled.div`
     display: flex;
-    margin-bottom: 1.6rem;
+    margin: 1.6rem 0;
     flex-direction: row;
     ${breakpoints("flex-direction", [
         { 300: "column" }
@@ -370,6 +370,7 @@ function App() {
     return (
         <ApplicationDiv className="App">
             <HawkHacksIcon src={Icon} alt="HawkHacks Icon" />
+            <SpaceFillerDiv />
             <PanelDiv className="dropshadow-large">
                 <PanelBackground src={Icon} />
                 <ClockWidget />
