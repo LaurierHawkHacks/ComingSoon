@@ -157,7 +157,7 @@ const ClockDivider = Styled.div`
 `;
 
 const SpaceFillerDiv = Styled.div`
-    margin: auto 0;
+    flex-grow: 1;
 `;
 
 const FormInput = Styled.input`
