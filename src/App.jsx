@@ -107,7 +107,7 @@ const SocialMediaIcon = Styled.img`
 const Title = Styled.h1`
     color: #0A6972;
     font-weight: 800;
-    margin: 2.2rem 0 0 0;
+    margin: 2rem 0 0 0;
     font-size: 2.2rem;
     ${breakpoints("font-size", [
         { 600: "2.2rem" },
@@ -125,6 +125,7 @@ const Subtitle = Styled.h3`
         { 300: "0.9rem" },
         { 250: "0.8rem" }
     ])}
+    margin: 0.4rem 0 1.2rem 0;
 `;
 
 const ClockPiece = Styled.div`
@@ -170,10 +171,7 @@ const FormInput = Styled.input`
         { 250: "0.8rem" }
     ])}
     padding: 0.6rem;
-    margin: 0.2rem 0.4rem 0.2rem 0;
-    ${breakpoints("margin", [
-        { 450: "0.2rem 0" }
-    ])}
+    margin: 0.2rem 0;
 `;
 
 const FormButton = Styled.button`
@@ -188,10 +186,7 @@ const FormButton = Styled.button`
         { 250: "0.8rem" }
     ])}
     padding: 0.6rem 1.2rem;
-    margin: 0.2rem 0 0.2rem 0.4rem;
-    ${breakpoints("margin", [
-        { 450: "0.8rem 0 0.2rem 0" }
-    ])}
+    margin: 0.8rem 0 0.4rem 0;
     flex-grow: 1;
 `;
 
@@ -276,7 +271,7 @@ class MyForm extends React.Component {
         return (
             <form onSubmit={this.SaveContact} id="form">
                 {/*<p style={{ color: "lightseagreen", fontWeight: "bold" }}>Subscribe here:</p>*/}
-                <FormInputDiv style={{ marginTop: "2rem" }}>
+                <FormInputDiv style={{ marginTop: "1.2rem" }}>
                     <div style={{ display: "flex", flexDirection: "column", flexGrow: 1 }}>
                         <FormInput
                             type="text"
@@ -290,8 +285,6 @@ class MyForm extends React.Component {
                             name="Email"
                             className="dropshadow"
                         />
-                    </div>
-                    <div style={{ display: "flex", flexDirection: "column" }}>
                         <FormButton onClick={this.Toggle} className="dropshadow">Sign Up</FormButton>
                     </div>
                 </FormInputDiv>
@@ -370,9 +363,9 @@ function App() {
                 <ClockWidget />
                 <Title>HawkHacks 2022</Title>
                 <Subtitle>Laurier | On-Campus and Virtual</Subtitle>
-                <p>
+                <p style={{ marginBottom: "0" }}>
                     We&apos;re currently working on something exciting!<br />
-                    Be notified when applications open.
+                    Be notified when applications open:
                 </p>
                 <MyForm />
             </PanelDiv>
