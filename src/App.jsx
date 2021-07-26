@@ -32,7 +32,7 @@ const HawkHacksIcon = Styled.img`
     :hover {
         filter: brightness(75%);
         transition: all 0.25s ease;
-        
+
         animation-name:rotate;
         animation-duration: 5s;
         animation-iteration-count: infinite;
@@ -46,16 +46,16 @@ const HawkHacksIcon = Styled.img`
     
     width: 5rem;
     ${breakpoints("width", [
-    { 250: "4rem" }
-])}
-    height: 5rem;
-    ${breakpoints("height", [
-    { 250: "4rem" }
-])}
-    margin: 3rem 0;
-    ${breakpoints("margin", [
-    { 250: "2rem 0" }
-])}
+        { 250: "4rem" }
+    ])}
+        height: 5rem;
+        ${breakpoints("height", [
+        { 250: "4rem" }
+    ])}
+        margin: 3rem 0;
+        ${breakpoints("margin", [
+        { 250: "2rem 0" }
+    ])}
 `;
 
 const PanelDiv = Styled.div`
@@ -66,26 +66,26 @@ const PanelDiv = Styled.div`
     height: max-content;
     width: max-content;
     ${breakpoints("width", [
-    { 600: "22rem" },
-    { 450: "20rem" },
-    { 350: "calc(100vw - 2rem)" }
-])};
-    padding: 2rem 4rem;
-    ${breakpoints("padding", [
-    { 800: "2rem 3rem" },
-    { 600: "2rem 2rem" },
-    { 450: "1.6rem 1.2rem" },
-    { 350: "1.2rem 0.6rem" }
-])}
-    margin-bottom: 2rem;
-    position: relative;
-    p {
-    font-size: 1rem;
-    ${breakpoints("font-size", [
-    { 450: "0.9rem" },
-    { 350: "0.82rem" },
-    { 250: "0.8rem" }
-])}
+        { 600: "22rem" },
+        { 450: "20rem" },
+        { 350: "calc(100vw - 2rem)" }
+    ])};
+        padding: 2rem 4rem;
+        ${breakpoints("padding", [
+        { 800: "2rem 3rem" },
+        { 600: "2rem 2rem" },
+        { 450: "1.6rem 1.2rem" },
+        { 350: "1.2rem 0.6rem" }
+    ])}
+        margin-bottom: 2rem;
+        position: relative;
+        p {
+        font-size: 1rem;
+        ${breakpoints("font-size", [
+        { 450: "0.9rem" },
+        { 350: "0.82rem" },
+        { 250: "0.8rem" }
+    ])}
     }
 `;
 
@@ -104,8 +104,8 @@ const SocialMediaDiv = Styled.div`
     margin-bottom: 1.6rem;
     flex-direction: row;
     ${breakpoints("flex-direction", [
-    { 300: "column" }
-])}
+        { 300: "column" }
+    ])}
 `;
 
 const SocialMediaIcon = Styled.img`
@@ -121,21 +121,21 @@ const Title = Styled.h1`
     margin: 2rem 0 0 0;
     font-size: 2.2rem;
     ${breakpoints("font-size", [
-    { 600: "2.2rem" },
-    { 450: "1.8rem" },
-    { 300: "1.4rem" },
-    { 250: "1.1rem" }
-])}
+        { 600: "2.2rem" },
+        { 450: "1.8rem" },
+        { 300: "1.4rem" },
+        { 250: "1.1rem" }
+    ])}
 `;
 
 const Subtitle = Styled.h3`
     font-weight: 600;
     font-size: 1.2rem;
     ${breakpoints("font-size", [
-    { 600: "1rem" },
-    { 300: "0.9rem" },
-    { 250: "0.8rem" }
-])}
+        { 600: "1rem" },
+        { 300: "0.9rem" },
+        { 250: "0.8rem" }
+    ])}
     margin: 0.4rem 0 1.2rem 0;
 `;
 
@@ -148,17 +148,17 @@ const ClockPiece = Styled.div`
     h4 {
     font-size: 1.35rem;
     ${breakpoints("font-size", [
-    { 300: "1rem" },
-    { 250: "0.9rem" }
-])}
+        { 300: "1rem" },
+        { 250: "0.9rem" }
+    ])}
     margin: 0;
     }
     p {
     font-size: 0.75rem;
     ${breakpoints("font-size", [
-    { 300: "0.6rem" },
-    { 250: "0.56rem" }
-])}
+        { 300: "0.6rem" },
+        { 250: "0.56rem" }
+    ])}
     margin: 0;
     }
 `;
@@ -177,10 +177,10 @@ const FormInput = Styled.input`
     border-radius: 0.8rem;
     font-size: 1rem;
     ${breakpoints("font-size", [
-    { 450: "0.9rem" },
-    { 300: "0.84rem" },
-    { 250: "0.8rem" }
-])}
+        { 450: "0.9rem" },
+        { 300: "0.84rem" },
+        { 250: "0.8rem" }
+    ])}
     padding: 0.6rem;
     margin: 0.2rem 0;
 `;
@@ -192,10 +192,10 @@ const FormButton = Styled.button`
     border-radius: 0.8rem;
     font-size: 1rem;
     ${breakpoints("font-size", [
-    { 450: "0.9rem" },
-    { 300: "0.84rem" },
-    { 250: "0.8rem" }
-])}
+        { 450: "0.9rem" },
+        { 300: "0.84rem" },
+        { 250: "0.8rem" }
+    ])}
     padding: 0.6rem 1.2rem;
     margin: 0.8rem 0 0.4rem 0;
     flex-grow: 1;
@@ -211,8 +211,8 @@ const FormInputDiv = Styled.div`
     display: flex;
     flex-direction: row;
     ${breakpoints("flex-direction", [
-    { 450: "column" }
-])}
+        { 450: "column" }
+    ])}
     marginTop: 2rem;
 `;
 
