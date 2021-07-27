@@ -118,7 +118,7 @@ const SocialMediaIcon = Styled.img`
     transition: all 0.25s ease;
     :hover {
         transition: all 0.25s ease;
-        filter: brightness(50%);
+        filter: brightness(75%);
         width: 1.5rem;
     }
 `;
@@ -213,7 +213,7 @@ const FormButton = Styled.button`
     :hover {
         transition: all 0.25s ease;
         cursor: pointer;
-        filter: brightness(50%);
+        filter: brightness(85%) drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.28));
     }
 `;
 
