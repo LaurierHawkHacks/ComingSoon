@@ -32,6 +32,7 @@ const HawkHacksIcon = Styled.img`
     :hover {
         filter: brightness(75%);
         transition: all 0.25s ease;
+        cursor: pointer;
 
         animation-name:rotate;
         animation-duration: 5s;
@@ -384,7 +385,10 @@ function App() {
 
     return (
         <ApplicationDiv className="App">
-            <HawkHacksIcon src={Icon} alt="HawkHacks Icon" />
+            <a href="/">
+                <HawkHacksIcon src={Icon} alt="HawkHacks Icon"/>
+            </a>
+            
             <SpaceFillerDiv />
             <PanelDiv className="dropshadow-large">
                 <PanelBackground src={Icon} />
