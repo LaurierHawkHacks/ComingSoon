@@ -1,21 +1,28 @@
 import React from "react";
 import Styled from "styled-components";
+
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+} from "react-router-dom";
+
 import Icon from "./assets/icon.svg";
+import config from "./config.json";
+
+import validator from "validator";
 import firebase from "firebase/app";
 import "firebase/firestore";
-
-import config from "./config.json";
-import validator from "validator";
 
 import {
     RiDiscordLine as DiscordIcon,
     RiTwitterLine as TwitterIcon,
     RiInstagramLine as InstagramIcon,
     RiGithubLine as GithubIcon
+
 } from "react-icons/ri";
 
 import { FiFacebook as FacebookIcon } from "react-icons/fi";
-
 import { breakpoints } from "./utils";
 
 const ApplicationDiv = Styled.div`
@@ -239,7 +246,6 @@ if (firebase.apps.length === 0) {
 let firestore = firebase.firestore();
 
 class MyForm extends React.Component {
-
     constructor(props) {
         super(props);
         this.Toggle = this.Toggle.bind(this);
@@ -252,6 +258,7 @@ class MyForm extends React.Component {
             message: "Thank you for subscribing!"
         };
     }
+
     Toggle() {
         this.setState(() => {
             return {
@@ -382,28 +389,33 @@ class ClockWidget extends React.Component {
 }
 
 function App() {
-
     return (
-        <ApplicationDiv className="App">
-            <a href="/">
-                <HawkHacksIcon src={Icon} alt="HawkHacks Icon"/>
-            </a>
+        <Router>
+            <Switch>
+                <Route path = "/">
+                    <ApplicationDiv className="App">
+                        <a href="/">
+                            <HawkHacksIcon src={Icon} alt="HawkHacks Icon"/>
+                        </a>
             
-            <SpaceFillerDiv />
-            <PanelDiv className="dropshadow-large">
-                <PanelBackground src={Icon} />
-                <ClockWidget />
-                <Title>HawkHacks 2022</Title>
-                <Subtitle>Laurier | On-Campus and Virtual</Subtitle>
-                <p style={{ marginBottom: "0" }}>
+                        <SpaceFillerDiv />
+                        <PanelDiv className="dropshadow-large">
+                            <PanelBackground src={Icon} />
+                            <ClockWidget />
+                            <Title>HawkHacks 2022</Title>
+                            <Subtitle>Laurier | On-Campus and Virtual</Subtitle>
+                            <p style={{ marginBottom: "0" }}>
                     We&apos;re currently working on something exciting!<br />
                     Be notified when applications open:
-                </p>
-                <MyForm />
-            </PanelDiv>
-            <SpaceFillerDiv />
-            <SocialMediaBar />
-        </ApplicationDiv>
+                            </p>
+                            <MyForm />
+                        </PanelDiv>
+                        <SpaceFillerDiv />
+                        <SocialMediaBar />
+                    </ApplicationDiv>
+                </Route>
+            </Switch>
+        </Router>
     );
 }
 
