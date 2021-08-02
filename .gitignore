@@ -25,3 +25,4 @@ yarn-error.log*
 config.json
 src/config.json
 *.env
+.firebase/hosting.YnVpbGQ.cache
