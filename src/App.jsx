@@ -390,32 +390,55 @@ class ClockWidget extends React.Component {
 
 function App() {
     return (
-        <Router>
-            <Switch>
-                <Route path = "/">
-                    <ApplicationDiv className="App">
-                        <a href="/">
-                            <HawkHacksIcon src={Icon} alt="HawkHacks Icon"/>
-                        </a>
-            
-                        <SpaceFillerDiv />
-                        <PanelDiv className="dropshadow-large">
-                            <PanelBackground src={Icon} />
-                            <ClockWidget />
-                            <Title>HawkHacks 2022</Title>
-                            <Subtitle>Laurier | On-Campus and Virtual</Subtitle>
-                            <p style={{ marginBottom: "0" }}>
-                    We&apos;re currently working on something exciting!<br />
-                    Be notified when applications open:
-                            </p>
-                            <MyForm />
-                        </PanelDiv>
-                        <SpaceFillerDiv />
-                        <SocialMediaBar />
-                    </ApplicationDiv>
-                </Route>
-            </Switch>
-        </Router>
+        <>
+            <Router>
+                <Switch>
+                    <Route path = "/">
+                        <ApplicationDiv className="App">
+                            <a href="/">
+                                <HawkHacksIcon src={Icon} alt="HawkHacks Icon"/>
+                            </a>
+                            <a
+                                id="mlh-trust-badge"
+                                style={{
+                                    display: "block",
+                                    maxWidth: "100px",
+                                    minWidth:"60px",
+                                    position:"fixed",
+                                    right:"50px",
+                                    top: 0,
+                                    width:"10%",
+                                    zIndex:10000
+                                }}
+                                href="https://mlh.io/seasons/2022/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2022-season&utm_content=white"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <img
+                                    src="https://s3.amazonaws.com/logged-assets/trust-badge/2022/mlh-trust-badge-2022-white.svg"
+                                    alt="Major League Hacking 2022 Hackathon Season"
+                                    style= {{ width:"100%" }}
+                                />
+                            </a>
+                            <SpaceFillerDiv />
+                            <PanelDiv className="dropshadow-large">
+                                <PanelBackground src={Icon} />
+                                <ClockWidget />
+                                <Title>HawkHacks 2022</Title>
+                                <Subtitle>Laurier | On-Campus and Virtual</Subtitle>
+                                <p style={{ marginBottom: "0" }}>
+                        We&apos;re currently working on something exciting!<br />
+                        Be notified when applications open:
+                                </p>
+                                <MyForm />
+                            </PanelDiv>
+                            <SpaceFillerDiv />
+                            <SocialMediaBar />
+                        </ApplicationDiv>
+                    </Route>
+                </Switch>
+            </Router>
+        </>
     );
 }
 
