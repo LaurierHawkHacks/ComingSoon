@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import Styled from "styled-components";
 
@@ -53,17 +54,11 @@ const HawkHacksIcon = Styled.img`
     }
     
     width: 5rem;
-    ${breakpoints("width", [
-        { 250: "4rem" }
-    ])}
+    ${breakpoints("width", [{ 250: "4rem" }])}
         height: 5rem;
-        ${breakpoints("height", [
-        { 250: "4rem" }
-    ])}
+        ${breakpoints("height", [{ 250: "4rem" }])}
         margin: 3rem 0;
-        ${breakpoints("margin", [
-        { 250: "2rem 0" }
-    ])}
+        ${breakpoints("margin", [{ 250: "2rem 0" }])}
 `;
 
 const PanelDiv = Styled.div`
@@ -74,26 +69,26 @@ const PanelDiv = Styled.div`
     height: max-content;
     width: max-content;
     ${breakpoints("width", [
-        { 600: "22rem" },
-        { 450: "20rem" },
-        { 350: "calc(100vw - 2rem)" }
-    ])};
+    { 600: "22rem" },
+    { 450: "20rem" },
+    { 350: "calc(100vw - 2rem)" }
+])};
         padding: 2rem 4rem;
         ${breakpoints("padding", [
-        { 800: "2rem 3rem" },
-        { 600: "2rem 2rem" },
-        { 450: "1.6rem 1.2rem" },
-        { 350: "1.2rem 0.6rem" }
-    ])}
+    { 800: "2rem 3rem" },
+    { 600: "2rem 2rem" },
+    { 450: "1.6rem 1.2rem" },
+    { 350: "1.2rem 0.6rem" }
+])}
         margin-bottom: 1rem;
         position: relative;
         p {
         font-size: 1rem;
         ${breakpoints("font-size", [
-        { 450: "0.9rem" },
-        { 350: "0.82rem" },
-        { 250: "0.8rem" }
-    ])}
+    { 450: "0.9rem" },
+    { 350: "0.82rem" },
+    { 250: "0.8rem" }
+])}
     }
 `;
 
@@ -112,8 +107,8 @@ const SocialMediaDiv = Styled.div`
     margin: 1.6rem 0;
     flex-direction: row;
     ${breakpoints("flex-direction", [
-        { 300: "column" }
-    ])}
+    { 300: "column" }
+])}
 `;
 
 const SocialMediaIcon = Styled.img`
@@ -136,21 +131,21 @@ const Title = Styled.h1`
     margin: 2rem 0 0 0;
     font-size: 2.2rem;
     ${breakpoints("font-size", [
-        { 600: "2.2rem" },
-        { 450: "1.8rem" },
-        { 300: "1.4rem" },
-        { 250: "1.1rem" }
-    ])}
+    { 600: "2.2rem" },
+    { 450: "1.8rem" },
+    { 300: "1.4rem" },
+    { 250: "1.1rem" }
+])}
 `;
 
 const Subtitle = Styled.h3`
     font-weight: 600;
     font-size: 1.2rem;
     ${breakpoints("font-size", [
-        { 600: "1rem" },
-        { 300: "0.9rem" },
-        { 250: "0.8rem" }
-    ])}
+    { 600: "1rem" },
+    { 300: "0.9rem" },
+    { 250: "0.8rem" }
+])}
     margin: 0.4rem 0 1.2rem 0;
 `;
 
@@ -163,17 +158,17 @@ const ClockPiece = Styled.div`
     h4 {
     font-size: 1.35rem;
     ${breakpoints("font-size", [
-        { 300: "1rem" },
-        { 250: "0.9rem" }
-    ])}
+    { 300: "1rem" },
+    { 250: "0.9rem" }
+])}
     margin: 0;
     }
     p {
     font-size: 0.75rem;
     ${breakpoints("font-size", [
-        { 300: "0.6rem" },
-        { 250: "0.56rem" }
-    ])}
+    { 300: "0.6rem" },
+    { 250: "0.56rem" }
+])}
     margin: 0;
     }
 `;
@@ -192,10 +187,10 @@ const FormInput = Styled.input`
     border-radius: 0.8rem;
     font-size: 1rem;
     ${breakpoints("font-size", [
-        { 450: "0.9rem" },
-        { 300: "0.84rem" },
-        { 250: "0.8rem" }
-    ])}
+    { 450: "0.9rem" },
+    { 300: "0.84rem" },
+    { 250: "0.8rem" }
+])}
     padding: 0.6rem;
     margin: 0.2rem 0;
 `;
@@ -207,10 +202,10 @@ const FormButton = Styled.button`
     border-radius: 0.8rem;
     font-size: 1rem;
     ${breakpoints("font-size", [
-        { 450: "0.9rem" },
-        { 300: "0.84rem" },
-        { 250: "0.8rem" }
-    ])}
+    { 450: "0.9rem" },
+    { 300: "0.84rem" },
+    { 250: "0.8rem" }
+])}
 
     padding: 0.6rem 1.2rem;
     margin: 0.8rem 0 0.4rem 0;
@@ -234,8 +229,8 @@ const FormInputDiv = Styled.div`
     display: flex;
     flex-direction: row;
     ${breakpoints("flex-direction", [
-        { 450: "column" }
-    ])}
+    { 450: "column" }
+])}
     marginTop: 2rem;
 `;
 
@@ -295,36 +290,40 @@ class MyForm extends React.Component {
             this.invalidEmail();
         }
 
-
-
         document.getElementById("form").reset();
-
-
     }
 
     render() {
         return (
-            <form onSubmit={this.SaveContact} id="form">
-                {/*<p style={{ color: "lightseagreen", fontWeight: "bold" }}>Subscribe here:</p>*/}
-                <FormInputDiv style={{ marginTop: "1.2rem" }}>
-                    <div style={{ display: "flex", flexDirection: "column", flexGrow: 1 }}>
-                        <FormInput
-                            type="text"
-                            placeholder="Name"
-                            name="Name"
-                            className="dropshadow"
-                        />
-                        <FormInput
-                            type="text"
-                            placeholder="Email Address"
-                            name="Email"
-                            className="dropshadow"
-                        />
-                        <FormButton onClick={this.Toggle} className="dropshadow">Sign Up</FormButton>
+            <div id="mc_embed_signup">
+                <form action="https://hawkhacks.us6.list-manage.com/subscribe/post?u=26e2afc1662a30dadf0c725af&id=050d487d87" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
+                    <div id="mc_embed_signup_scroll">
+                        <h2>Newsletter</h2>
+                        <div className="indicates-required"><span className="asterisk">*</span> indicates required</div>
+
+                        <div className="mc-field-group">
+                            <FormInput type="text" placeholder="*Name" name="MMERGE1" className id="mce-MMERGE1" />
+                        </div>
+
+                        <div className="mc-field-group">
+                            <FormInput type="email" placeholder="*Email" name="EMAIL" className="required email" id="mce-EMAIL" />
+                        </div>
+
+                        <div id="mce-responses" className="clear foot">
+                            <div className="response" id="mce-error-response" style={{ display: "none" }} />
+                            <div className="response" id="mce-success-response" style={{ display: "none" }} />
+                        </div>    {/* real people should not fill this in and expect good things - do not remove this or risk form bot signups*/}
+                        <div style={{ position: "absolute", left: "-5000px" }} aria-hidden="true"><input type="text" name="b_26e2afc1662a30dadf0c725af_050d487d87" tabIndex={-1} defaultValue /></div>
+
+                        <div className="optionalParent">
+                            <div className="clear foot">
+                                <FormButton type="submit" defaultValue="Subscribe" name="subscribe" id="mc-embedded-subscribe" className="button">Subscribe!</FormButton>
+                            </div>
+                        </div>
+
                     </div>
-                </FormInputDiv>
-                {this.state.visibility && <FormMessage>{this.state.message}</FormMessage>}
-            </form >
+                </form>
+            </div>
         );
     }
 }
@@ -355,7 +354,7 @@ class ClockWidget extends React.Component {
         );
     }
     render() {
-        const hackathonStartTime = 1641531600000; // use currentmillis.com to find this number
+        const hackathonStartTime = 1652414400000; // use currentmillis.com to find this number
         const countdown = hackathonStartTime - this.state.date;
         const days = (countdown - (countdown % 86400000)) / 86400000;
         const hours = ((countdown % 86400000) - (countdown % 3600000)) / 3600000;
@@ -392,21 +391,21 @@ function App() {
     return (
         <Router>
             <Switch>
-                <Route path = "/">
+                <Route path="/">
                     <ApplicationDiv className="App">
                         <a href="/">
-                            <HawkHacksIcon src={Icon} alt="HawkHacks Icon"/>
+                            <HawkHacksIcon src={Icon} alt="HawkHacks Icon" />
                         </a>
-            
+
                         <SpaceFillerDiv />
                         <PanelDiv className="dropshadow-large">
                             <PanelBackground src={Icon} />
                             <ClockWidget />
                             <Title>HawkHacks 2022</Title>
-                            <Subtitle>Laurier | On-Campus and Virtual</Subtitle>
+                            <Subtitle>Laurier | Virtual</Subtitle>
                             <p style={{ marginBottom: "0" }}>
-                    We&apos;re currently working on something exciting!<br />
-                    Be notified when applications open:
+                                We&apos;re currently working on something exciting!<br />
+                                Be notified when applications open:
                             </p>
                             <MyForm />
                         </PanelDiv>
@@ -420,27 +419,3 @@ function App() {
 }
 
 export default App;
-
-const NEXT_EVENT_YEAR = 2021;
-const NEXT_EVENT_MONTH = 8;
-const NEXT_EVENT_DAY = 25;
-const NEXT_EVENT_HOUR = 0;
-
-const NEXT_EVENT_DATE = new Date(NEXT_EVENT_YEAR, NEXT_EVENT_MONTH, NEXT_EVENT_DAY, NEXT_EVENT_HOUR, 0, 0, 0);
-
-// eslint-disable-next-line no-unused-vars
-function getTimeLeft() {
-    let timeLeft = new Date(NEXT_EVENT_DATE - new Date());
-    let days = Math.floor(timeLeft / (24 * 60 * 60 * 1000));
-    timeLeft %= (24 * 60 * 60 * 1000);
-
-    let hours = Math.floor(timeLeft / (60 * 60 * 1000));
-    timeLeft %= (60 * 60 * 1000);
-
-    let minutes = Math.floor(timeLeft / (60 * 1000));
-    timeLeft %= (60 * 1000);
-
-    let seconds = Math.floor(timeLeft / 1000);
-    return { "days": days, "hours": hours, "minutes": minutes, "seconds": seconds };
-
-}
