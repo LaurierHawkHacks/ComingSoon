@@ -23,7 +23,6 @@ import {
 
 } from "react-icons/ri";
 
-import { FiFacebook as FacebookIcon } from "react-icons/fi";
 import { breakpoints } from "./utils";
 
 const ApplicationDiv = Styled.div`
