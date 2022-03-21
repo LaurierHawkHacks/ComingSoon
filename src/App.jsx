@@ -334,7 +334,6 @@ class SocialMediaBar extends React.Component {
         return (
             <SocialMediaDiv>
                 <a href="https://discord.gg/z8XbEEXkqN" target="_blank" rel="noreferrer"><SocialMediaIcon as={DiscordIcon} alt="Discord Icon" /></a>
-                <a href="" target="" rel="noreferrer"><SocialMediaIcon as={FacebookIcon} alt="Facebook Icon" /></a>
                 <a href="https://twitter.com/wluhawkhacks" target="_blank" rel="noreferrer"><SocialMediaIcon as={TwitterIcon} alt="Twitter Icon" /></a>
                 <a href="https://www.instagram.com/wluhawkhacks/" target="_blank" rel="noreferrer"><SocialMediaIcon as={InstagramIcon} alt="Instagram Icon" /></a>
                 <a href="https://github.com/LaurierHawkHacks" target="_blank" rel="noreferrer"><SocialMediaIcon as={GithubIcon} alt="Github Icon" /></a>
