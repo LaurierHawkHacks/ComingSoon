@@ -15,7 +15,7 @@
 ![GitHub](https://img.shields.io/github/license/LaurierCS/Website?style=flat-square)
 
 ## Overview :sparkles:
-- The official Laurier Computing Society website, made with :heart:
+- The official HawkHacks 2023 website, made with :heart:
 
 ## Development :computer:
 ![](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
