@@ -90,6 +90,22 @@ button {
     background-size: cover;
 }
 
+.card {
+    background: rgba(248, 248, 248, 1);
+    color: #2F4858;
+    text-align: center;
+    border-radius: 1rem;
+    height: max-content;
+    width: max-content;
+    padding: 2rem 4rem;
+    margin-bottom: 1rem;
+    position: relative;
+ };
+
+ .card > p {
+    font-size: 1rem;
+}
+
 .icon {
     width: 20em;
     transition: all 0.25s ease;

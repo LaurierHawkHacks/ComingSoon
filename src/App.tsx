@@ -13,17 +13,18 @@ const App = () => {
                     <img className="icon" src={Icon} />
                 </a>
 
+                {/* <div className="card"> */}
                 <h1 className="title">
                     {"<HawkHacks />"}
                 </h1>
-
                 <Clock />
+                {/* </div> */}
                 {/* <Subscribe /> */}
             </div>
 
             <div className="background-container" />
         </div>
-    );  
+    );
 };
 
 export default App;
