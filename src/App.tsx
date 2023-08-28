@@ -24,10 +24,16 @@ const App = () => {
                     <p>Laurier | In-Person & Online</p>
                     <Spacer h={50} />
 
-                    <p style={{width: "400px", textAlign: "center", color: "var(--black)"}}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod velit eu erat semper convallis. Maecenas efficitur
-                        sed nibh in vulputate. In in mauris et felis aliquet auctor sit amet id neque.
+                    {/* <div style={{width: "100%", display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center"}}> */}
+                    <p style={{width: "300px", textAlign: "center", color: "var(--black)"}}>
+                        {"We're coming back for another year! Check back in a bit for more information and details about what's to come."}
                     </p>
+                    {/* <Spacer w={10} /> */}
+                    {/* <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}> */}
+                    {/* <h3>Subscribe</h3> */}
+                    {/* <button>Subscribe</button> */}
+                    {/* </div> */}
+                    {/* </div> */}
 
                     <SocialMediaBar />
                 </Card>

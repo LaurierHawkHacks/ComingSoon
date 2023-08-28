@@ -1,11 +1,12 @@
 import React from "react";
 
 interface SpacerProps {
-    h: number;
+    w?: number;
+    h?: number;
 }
 
-const Spacer = ({h}: SpacerProps) => (
-    <div style={{height: h}} />
+const Spacer = ({w, h}: SpacerProps) => (
+    <div style={{width: w, height: h}} />
 );
 
 export { Spacer };
