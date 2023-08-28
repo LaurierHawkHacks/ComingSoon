@@ -1,13 +1,14 @@
 import React from "react";
-import PropTypes from "prop-types";
+// import Popup from "reactjs-popup";
 import Icon from "@assets/icon.svg";
-import { Card, Clock, Spacer, Subscribe, SocialMediaBar } from "./components";
+import { Card, Clock, Spacer, SocialMediaBar, NewsletterPopup } from "./components";
 
 interface ContainerProps {
     children: React.ReactNode;
 }
 
 const App = () => {
+    // const [showPopup, setShowPopup] = React.useState(false);
     return (
         <AppContainer>
             <ContentContainer>
@@ -31,11 +32,21 @@ const App = () => {
                     {/* <Spacer w={10} /> */}
                     {/* <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}> */}
                     {/* <h3>Subscribe</h3> */}
-                    {/* <button>Subscribe</button> */}
-                    {/* </div> */}
-                    {/* </div> */}
-
+                    {/* <button onClick={
+                        async (event) => {
+                            event?.preventDefault();
+                            setShowPopup(true);
+                        }
+                    }
+                    >
+                        Subscribe
+                    </button> */}
                     <SocialMediaBar />
+
+                    {/* <Popup trigger={<button> Trigger</button>} position="center">
+                        <NewsletterPopup />
+                    </Popup> */}
+
                 </Card>
             </ContentContainer>
 
