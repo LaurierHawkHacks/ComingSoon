@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --black: #30292F;
+    --green: #0A6972;
+    --dark-green: #2F4858;
+    --white: rgba(248, 248, 248, 1);
+    --background-gradient: linear-gradient(-45deg, #ffcbc4, #ffffff, #b0eafd);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,37 +21,38 @@ html {
     width: 100vw;
     height: 100vh;
     font-size: 16px;
-    font-family: "Nunito Sans", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+
+    --webkit-font-smoothing: antialiased;
+    --moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
     font-family: "Nunito Sans", sans-serif;
+    color: var(--green);
 }
 
 h1 {
-    font-size: 5rem;
-    font-weight: 600;
+    font-size: 2.5rem;
+    font-weight: 800;
 }
 
 h2 {
-    font-size: 4rem;
+    font-size: 1.75rem;
     font-weight: 600;
 }
 
 h3 {
-    font-size: 3rem;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
 h4 {
-    font-size: 2rem;
+    font-size: 1.25rem;
     font-weight: 600;
 }
 
 h5 {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 600;
 }
 
@@ -48,16 +62,16 @@ h6 {
 }
 
 button {
-/* generate a modern looking button */
     display: inline-block;
-    padding: 0.5em 1em;
+    /* padding: 0.5em 1em;
     text-decoration: none;
     background: #668ad8;
     color: #FFF;
     border-bottom: solid 4px #627295;
     border-radius: 3px;
-    transition: 0.2s;
+    transition: 0.2s; */
 }
+
 
 .app-container {
     width: 100%;
@@ -67,8 +81,7 @@ button {
     align-items: center;
     justify-content: center;
 
-    background: linear-gradient(-45deg, #ffcbc4, #ffffff, #b0eafd);
-    /* background: linear-gradient(-45deg, #ffdda7, #ffffff, #b0eafd); */
+    background: var(--background-gradient);
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
 }
@@ -76,6 +89,9 @@ button {
 .content-container {
     width: 100%;
     height: 100%;
+    gap: 2em;
+    padding-top: 2em;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,24 +106,65 @@ button {
     background-size: cover;
 }
 
+.social-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 1.6rem 0;
+}
+
+.social-icon {
+    color: var(--dark-green);
+    margin: 0.8rem;
+    width: 1.8rem;
+    height: 1.8rem;
+
+    transition: all 0.25s ease;
+}
+
+.social-icon:hover {
+    transition: all 0.25s ease;
+    filter: brightness(75%);
+    scale: 1.5;
+}
+
+
 .card {
-    background: rgba(248, 248, 248, 1);
-    color: #2F4858;
-    text-align: center;
-    border-radius: 1rem;
-    height: max-content;
     width: max-content;
+    height: max-content;
+    text-align: center;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 1rem;
     padding: 2rem 4rem;
     margin-bottom: 1rem;
-    position: relative;
+    background: var(--white);
+    color: var(--dark-green);
+    filter: drop-shadow(4px 4px 14px rgba(0, 0, 0, 0.24));
  };
 
- .card > p {
+.card > p {
     font-size: 1rem;
 }
 
+.card-background {
+    opacity: 0.14;
+    position: absolute;
+    left: 16%;
+    top: 0;
+    width: 70%;
+    height: 100%;
+    pointer-events: none;
+}
+
 .icon {
-    width: 20em;
+    width: 7.5em;
     transition: all 0.25s ease;
 }
 
@@ -121,30 +178,37 @@ button {
 }
 
 .clock-container {
+    gap: 1.5em;
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+}
+
+.clock-divider {
+    border-left: 2px solid var(--black);
+    display: block;
 }
 
 .clock-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 .clock-section > h4 {
-    font-size: 3.5rem;
+    font-size: 1.75rem;
+    color: var(--black);
 }
 
 .clock-section > p {
-    font-size: 2.5rem;
+    font-size: 1rem;
+    color: var(--black);
 }
 
 .clock-section-divider {
-    border-left: 2px solid #30292f;
+    border-left: 2px solid var(--black);
 }
 
 @keyframes rotate {
@@ -153,7 +217,7 @@ button {
 }
 
 @keyframes gradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }

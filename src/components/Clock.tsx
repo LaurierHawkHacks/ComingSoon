@@ -1,5 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
+
+interface ClockPieceProps {
+    children?: React.ReactNode;
+}
 
 const Clock = () => {
     const [date, setDate] = React.useState(new Date());
@@ -41,19 +44,13 @@ const Clock = () => {
 };
 
 const ClockDivider = () => (
-    <div className="clock-divider">
-        <h4>:</h4>
-    </div>
+    <div className="clock-divider" />
 );
 
-const ClockPiece = ({children}: {children?: React.ReactNode}) => (
+const ClockPiece = ({children}: ClockPieceProps) => (
     <div className="clock-section">
         {children}
     </div>
 );
-
-ClockPiece.propTypes = {
-    children: PropTypes.any
-};
 
 export { Clock };
