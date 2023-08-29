@@ -71,4 +71,4 @@ If you are developing a production application, we recommend updating the config
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
 
 ## Contributing 🥇
-- We welcome all contributions for further information see [here](https://github.com/LaurierHawkHacks/Landing/blob/main/CONTRIBUTING.md)
+- We welcome all contributions for further information see [here](https://github.com/LaurierHawkHacks/ComingSoon/blob/main/CONTRIBUTING.md)
