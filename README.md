@@ -11,7 +11,6 @@
 
 ```
                                                      
-
 ![GitHub](https://img.shields.io/github/license/LaurierHawkHacks/ComingSoon?style=flat-square)
 
 #### The official coming soon page for HawkHacks - see [here](https://hawkhacks.ca).
