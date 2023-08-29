@@ -1,7 +1,7 @@
 import React from "react";
 // import Popup from "reactjs-popup";
 import Icon from "@assets/icon.svg";
-import { Card, Clock, Spacer, SocialMediaBar, NewsletterPopup } from "./components";
+import { Card, Clock, Clouds, Spacer, SocialMediaBar, NewsletterPopup } from "./components";
 
 interface ContainerProps {
     children: React.ReactNode;
@@ -12,6 +12,8 @@ const App = () => {
     return (
         <AppContainer>
             <ContentContainer>
+                <Clouds />
+
                 <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer">
                     <img className="icon" src={Icon} />
                 </a>
