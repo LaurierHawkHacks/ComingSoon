@@ -2,11 +2,11 @@ import React from "react";
 
 const Buttons = () => (
     <div className="button-container">
-        <form action="https://google.com" target="_blank">
+        <form action="http://eepurl.com/hDHf8b" target="_blank">
             <button>Newsletter</button>
         </form>
 
-        <form action="https://google.com" target="_blank">
+        <form action="https://hiring.hawkhacks.ca" target="_blank">
             <button>Hiring</button>
         </form>
     </div>

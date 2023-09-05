@@ -12,13 +12,11 @@ const App = () => {
     return (
         <AppContainer>
             <ContentContainer>
-                <Clouds />
+                {/* <Clouds /> */}
 
                 <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer">
                     <img className="icon" src={Icon} />
                 </a>
-
-                {/* <Spacer h={15} /> */}
 
                 <Card>
                     <Clock />
@@ -28,7 +26,10 @@ const App = () => {
                     <Spacer h={50} />
 
                     <p style={{width: "300px", textAlign: "center", color: "var(--black)"}}>
-                        {"We're coming back for another year! Check back in a bit for more information and details about what's to come."}
+                        {"We're coming back for another year! "}
+                        <strong>{"Keep up to date with our newsletter"}</strong>
+                        {" below! Wanna be a part of the team? "}
+                        <strong>{"Check out our hiring page below!"}</strong>
                     </p>
 
                     <SocialMediaBar />
