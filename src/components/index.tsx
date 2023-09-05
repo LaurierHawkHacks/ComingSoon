@@ -4,4 +4,4 @@ export {Clouds} from "./Clouds";
 export {Subscribe} from "./Subscribe";
 export {SocialMediaBar} from "./SocialMediaBar";
 export {Spacer} from "./Spacer";
-export {NewsletterPopup} from "./NewsletterPopup";
+export {Buttons} from "./Buttons";

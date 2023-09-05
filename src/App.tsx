@@ -1,7 +1,7 @@
 import React from "react";
 // import Popup from "reactjs-popup";
 import Icon from "@assets/icon.svg";
-import { Card, Clock, Clouds, Spacer, SocialMediaBar, NewsletterPopup } from "./components";
+import { Card, Clock, Clouds, Spacer, SocialMediaBar, Buttons } from "./components";
 
 interface ContainerProps {
     children: React.ReactNode;
@@ -18,7 +18,7 @@ const App = () => {
                     <img className="icon" src={Icon} />
                 </a>
 
-                <Spacer h={50} />
+                {/* <Spacer h={15} /> */}
 
                 <Card>
                     <Clock />
@@ -27,28 +27,12 @@ const App = () => {
                     <p>Laurier | In-Person & Online</p>
                     <Spacer h={50} />
 
-                    {/* <div style={{width: "100%", display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center"}}> */}
                     <p style={{width: "300px", textAlign: "center", color: "var(--black)"}}>
                         {"We're coming back for another year! Check back in a bit for more information and details about what's to come."}
                     </p>
-                    {/* <Spacer w={10} /> */}
-                    {/* <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}> */}
-                    {/* <h3>Subscribe</h3> */}
-                    {/* <button onClick={
-                        async (event) => {
-                            event?.preventDefault();
-                            setShowPopup(true);
-                        }
-                    }
-                    >
-                        Subscribe
-                    </button> */}
+
                     <SocialMediaBar />
-
-                    {/* <Popup trigger={<button> Trigger</button>} position="center">
-                        <NewsletterPopup />
-                    </Popup> */}
-
+                    <Buttons />
                 </Card>
             </ContentContainer>
 
