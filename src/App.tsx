@@ -27,8 +27,8 @@ const App = () => {
 
                     <p style={{width: "300px", textAlign: "center", color: "var(--black)"}}>
                         {"We're coming back for another year! "}
-                        <strong>{"Keep up to date with our newsletter"}</strong>
-                        {" below! Wanna be a part of the team? "}
+                        <strong>{"Keep up to date with our newsletter below!"}</strong>
+                        {" Wanna be a part of the team? "}
                         <strong>{"Check out our hiring page below!"}</strong>
                     </p>
 
