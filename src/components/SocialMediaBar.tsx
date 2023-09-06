@@ -16,7 +16,7 @@ const SocialMediaBar = () => {
 
     return (
         <div className="social-container">
-            <SocialMediaIcon url="https://discord.gg/z8XbEEXkqN"
+            <SocialMediaIcon url="https://discord.hawkhacks.ca"
                 icon={<DiscordIcon {...iconProps} />}
             />
             <SocialMediaIcon url="https://linkedin.com/company/hawkhacks"
