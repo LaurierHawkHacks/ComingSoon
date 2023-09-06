@@ -28,7 +28,7 @@ https://nodejs.org/en/download/
 
 > Install pnpm using npm
 ```sh
-$ npm install -g pnpm
+$ pnpm install -g pnpm
 ```
 
 > Clone the repo
@@ -48,7 +48,7 @@ $ pnpm i
 
 > Run local server
 ```sh
-$ pnpm run dev
+$ pnpm dev
 ```
 
 ## Expanding the ESLint configuration 🗒️
