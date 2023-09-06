@@ -74,8 +74,8 @@ button {
     text-decoration: none;
     background: #668ad8;
     color: #FFF;
-    border-bottom: solid 4px #627295;
-    border-radius: 3px;
+    border-bottom: solid 0.25rem #627295;
+    border-radius: 0.1875rem;
     transition: 0.2s;
 }
 
@@ -166,7 +166,7 @@ button:hover {
     margin-bottom: 1rem;
     background: var(--white);
     color: var(--dark-green);
-    filter: drop-shadow(4px 4px 14px rgba(0, 0, 0, 0.24));
+    filter: drop-shadow(0.25rem 0.25rem 0.875rem rgba(0, 0, 0, 0.24));
  }
 
 .card > p {
@@ -207,7 +207,7 @@ button:hover {
 }
 
 .clock-divider {
-    border-left: 2px solid var(--black);
+    border-left: 0.125rem solid var(--black);
     display: block;
 }
 
@@ -228,7 +228,7 @@ button:hover {
 }
 
 .clock-section-divider {
-    border-left: 2px solid var(--black);
+    border-left: 0.125rem solid var(--black);
 }
 
 @keyframes rotate {
