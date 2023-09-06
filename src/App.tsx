@@ -32,8 +32,8 @@ const AppContents = () => (
             <Card>
                 <Clock />
                 <Spacer h={50} />
-                <h1 className="title">HawkHacks 2024</h1>
-                <p>Laurier | March 8th - 10th | Hybrid</p>
+                <h1 className="title">{"HawkHacks 2024"}</h1>
+                <p>{"Waterloo, ON | March 8th - 10th | Hybrid"}</p>
                 <Spacer h={50} />
 
                 <p style={{width: "300px", textAlign: "center", color: "var(--black)"}}>
