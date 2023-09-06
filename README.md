@@ -48,7 +48,7 @@ $ pnpm i
 
 > Run local server
 ```sh
-$ pnpm run dev
+$ pnpm dev
 ```
 
 ## Expanding the ESLint configuration 🗒️
