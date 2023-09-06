@@ -162,7 +162,7 @@ button:hover {
     background: var(--white);
     color: var(--dark-green);
     filter: drop-shadow(4px 4px 14px rgba(0, 0, 0, 0.24));
- };
+ }
 
 .card > p {
     font-size: 1rem;
