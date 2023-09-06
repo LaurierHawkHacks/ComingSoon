@@ -28,7 +28,7 @@ https://nodejs.org/en/download/
 
 > Install pnpm using npm
 ```sh
-$ pnpm install -g pnpm
+$ npm install -g pnpm
 ```
 
 > Clone the repo
