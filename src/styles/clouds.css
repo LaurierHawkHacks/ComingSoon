@@ -22,98 +22,164 @@ body {
 
 @-webkit-keyframes animateCloud {
     0% {
-        margin-left: -1000px;
+        margin-left: 0%;
     }
     100% {
-        margin-left: 100%;
+        margin-left: 150%;
     }
 }
 
 @-moz-keyframes animateCloud {
     0% {
-        margin-left: -1000px;
+        margin-left: 0%;
     }
     100% {
-        margin-left: 100%;
+        margin-left: 150%;
     }
 }
 
 @keyframes animateCloud {
     0% {
-        margin-left: -1000px;
+        margin-left: 0%;
     }
     100% {
-        margin-left: 100%;
+        margin-left: 150%;
     }
 }
 
 /* ANIMATIONS */
-
-.x1 {
-	position: fixed;
-	left: -100%;
-	top: 20px;
-
+.speed-35 {
 	-webkit-animation: animateCloud 35s linear infinite;
 	-moz-animation: animateCloud 35s linear infinite;
 	animation: animateCloud 35s linear infinite;
+}
 
-	-webkit-transform: scale(0.65);
-	-moz-transform: scale(0.65);
-	transform: scale(0.65);
+.speed-30 {
+    -webkit-animation: animateCloud 30s linear infinite;
+    -moz-animation: animateCloud 30s linear infinite;
+    animation: animateCloud 30s linear infinite;
+}
+
+.speed-25 {
+	-webkit-animation: animateCloud 25s linear infinite;
+	-moz-animation: animateCloud 25s linear infinite;
+	animation: animateCloud 25s linear infinite;
+}
+
+.speed-20 {
+	-webkit-animation: animateCloud 20s linear infinite;
+	-moz-animation: animateCloud 20s linear infinite;
+	animation: animateCloud 20s linear infinite;
+}
+
+.speed-18 {
+	-webkit-animation: animateCloud 18s linear infinite;
+	-moz-animation: animateCloud 18s linear infinite;
+	animation: animateCloud 18s linear infinite;
+}
+
+.speed-15 {
+	-webkit-animation: animateCloud 15s linear infinite;
+	-moz-animation: animateCloud 15s linear infinite;
+	animation: animateCloud 15s linear infinite;
+}
+
+.delay-15 {
+    -webkit-animation-delay: 15s;
+    -moz-animation-delay: 15s;
+    animation-delay: 15s;
+}
+
+.delay-10 {
+    -webkit-animation-delay: 10s;
+    -moz-animation-delay: 10s;
+    animation-delay: 10s;
+}
+
+.delay-8 {
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+    animation-delay: 8s;
+}
+
+.delay-5 {
+    -webkit-animation-delay: 5s;
+    -moz-animation-delay: 5s;
+    animation-delay: 5s;
+}
+
+.delay-3 {
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    animation-delay: 3s;
+}
+
+.delay-2 {
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+.delay-1 {
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+/* SIZES */
+.cloud-lg {
+    -webkit-transform: translateX(-100%) scale(0.75);
+    -moz-transform: translateX(-100%) scale(0.75);
+    transform: translateX(-100%) scale(0.75);
+}
+
+.cloud-md {
+    -webkit-transform: translateX(-100%) scale(0.6);
+    -moz-transform: translateX(-100%) scale(0.6);
+    transform: translateX(-100%) scale(0.6);
+}
+
+.cloud-sm {
+    -webkit-transform: translateX(-100%) scale(0.5);
+    -moz-transform: translateX(-100%) scale(0.5);
+    transform: translateX(-100%) scale(0.5);
+}
+
+.cloud-xs {
+    -webkit-transform: translateX(-100%) scale(0.4);
+    -moz-transform: translateX(-100%) scale(0.4);
+    transform: translateX(-100%) scale(0.4);
+}
+
+/* POSITIONS */
+.x1 {
+	position: fixed;
+    left: 0;
+	top: 5%;
 }
 
 .x2 {
 	position: fixed;
-	left: -100%;
-	top: 100px;
-
-	-webkit-animation: animateCloud 20s linear infinite;
-	-moz-animation: animateCloud 20s linear infinite;
-	animation: animateCloud 20s linear infinite;
-
-	-webkit-transform: scale(0.3);
-	-moz-transform: scale(0.3);
-	transform: scale(0.3);
+    left: 0;
+    top: 12%;
 }
 
 .x3 {
 	position: fixed;
-	left: -100%;
-	top: 150px;
-	-webkit-animation: animateCloud 30s linear infinite;
-	-moz-animation: animateCloud 30s linear infinite;
-	animation: animateCloud 30s linear infinite;
-
-	-webkit-transform: scale(0.5);
-	-moz-transform: scale(0.5);
-	transform: scale(0.5);
+	left: 0;
+    top: 15%;
 }
 
 .x4 {
 	position: fixed;
-	left: -100%;
-	top: 200px;
-	-webkit-animation: animateCloud 18s linear infinite;
-	-moz-animation: animateCloud 18s linear infinite;
-	animation: animateCloud 18s linear infinite;
-
-	-webkit-transform: scale(0.4);
-	-moz-transform: scale(0.4);
-	transform: scale(0.4);
+    left: 0;
+    top: 17%;
 }
 
 .x5 {
 	position: fixed;
-	left: 10px;
-	top: 300px;
-	-webkit-animation: animateCloud 25s linear infinite;
-	-moz-animation: animateCloud 25s linear infinite;
-	animation: animateCloud 25s linear infinite;
-
-	-webkit-transform: scale(0.55);
-	-moz-transform: scale(0.55);
-	transform: scale(0.55);
+	left: 0;
+    top: 25%;
 }
 
 /* OBJECTS */
