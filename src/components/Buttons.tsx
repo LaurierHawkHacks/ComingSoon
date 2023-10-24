@@ -6,8 +6,8 @@ const Buttons = () => (
             <button>Newsletter</button>
         </form>
 
-        <form action="https://hawkhacks.notion.site/HawkHacks-Hiring-Package-2c23019befc34246b13ac1f143317901" target="_blank">
-            <button>Hiring</button>
+        <form action="https://hawkhacks.ca/sponsorships.pdf" target="_blank" method="GET">
+            <button style={{ whiteSpace: 'nowrap' }}>Sponsor Us</button>
         </form>
     </div>
 );
