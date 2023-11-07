@@ -8,7 +8,7 @@ import {
     Spacer,
     SocialMediaBar,
     Buttons,
-} from "./components";
+} from "@components";
 
 interface ContainerProps {
     children: React.ReactNode;

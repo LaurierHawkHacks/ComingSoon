@@ -7,7 +7,7 @@ const Buttons = () => (
         </form>
 
         <form action="https://hawkhacks.ca/sponsorships.pdf" target="_blank" method="GET">
-            <button style={{ whiteSpace: 'nowrap' }}>Sponsor Us</button>
+            <button style={{ whiteSpace: "nowrap" }}>Sponsor Us</button>
         </form>
     </div>
 );
