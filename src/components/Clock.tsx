@@ -11,7 +11,7 @@ const Clock = () => {
         return () => clearInterval(timer);
     }, []);
 
-    const hackathonStartTime = 1709938800000; // use currentmillis.com to find this number
+    const hackathonStartTime = 1712350800000; // use currentmillis.com to find this number
     const countdown = hackathonStartTime - date.getTime();
     const days = (countdown - (countdown % 86400000)) / 86400000;
     const hours = ((countdown % 86400000) - (countdown % 3600000)) / 3600000;
