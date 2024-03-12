@@ -40,7 +40,7 @@ const AppContents = () => (
                 <Clock />
                 <Spacer h={50} />
                 <h1 className="title">{"HawkHacks 2024"}</h1>
-                <p>{"Waterloo, ON | April 5th - 7th | In-Person"}</p>
+                <p>{"Waterloo, ON | May 17th - May 19th | In-Person"}</p>
                 <Spacer h={50} />
 
                 <p
